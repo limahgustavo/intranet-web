@@ -1,0 +1,62 @@
+<div class="ger">
+  <!-- Toolbar -->
+  <header class="toolbar" role="banner">
+    <img alt="oi"
+         width="200"
+         src="assets\TJ-AM.png"/>
+    <h1 class="topsimple">PONTO ELETRONICO</h1>
+  </header>
+  <div class="pointbody">
+    <div>
+      <h4>Matricula: <span>{{getUserInfo.register}}</span></h4>
+      <h4>Nome: <span>{{getUserInfo.name}}</span></h4>
+    </div>
+    <form [formGroup]="formGroup">
+      <div style="display: inline-block; width: 10%;">
+        <h4>inicial:</h4>
+        <input formControlName="startDate" id="date" type="date">
+      </div>
+      <div style="display: inline-block; width: 15%;">
+        <h4>final:</h4>
+        <input formControlName="endDate" type="date">
+      </div>
+      <button (click)="getPointData()">Pesquisar</button>
+      <button (click)="createPoint()" class="buttonpoint">Marcar Ponto</button>
+    </form>
+
+
+    <hr>
+    <div>
+      <table id="customers">
+        <thead>
+        <tr>
+          <th scope="col">Dia</th>
+          <th scope="col">1 Marc.</th>
+          <th scope="col">2 Marc.</th>
+          <th scope="col">3 Marc.</th>
+          <th scope="col">4 Marc.</th>
+          <th scope="col">5 Marc.</th>
+          <th scope="col">6 Marc.</th>
+          <th scope="col">Status</th>
+          <th scope="col">Obs.</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr *ngFor="let element of pointData">
+          <th scope="row">{{element.date}}</th>
+          <td>{{element.hours[0] || "-"}}</td>
+          <td>{{element.hours[1] || "-"}}</td>
+          <td>{{element.hours[2] || "-"}}</td>
+          <td>{{element.hours[3] || "-"}}</td>
+          <td>{{element.hours[4] || "-"}}</td>
+          <td>{{element.hours[5] || "-"}}</td>
+          <td>{{element.hours.length > 2 ? "-" : "Falta marcação"}}</td>
+          <td></td>
+        </tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

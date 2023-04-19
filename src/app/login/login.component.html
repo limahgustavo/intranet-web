@@ -1,0 +1,26 @@
+<div class="ger">
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <img alt="oi"
+         width="200"
+         src="assets\TJ-AM.png"/>
+  </div>
+  <div class="container">
+    <div class="centro">
+      <!-- conteúdo da div centralizada -->
+      <div class="info">
+        <form id="form1" [formGroup]="formGroup">
+          <h1>Acesso Restrito</h1>
+          <div>
+            <input required formControlName="login" placeholder="Login" type="text" id="login2" name="login">
+          </div>
+          <div>
+            <input required formControlName="password" placeholder="Senha" type="password" id="senha2" name="senha">
+          </div>
+          <h3 [routerLink]="['/register']" routerLinkActive="active">Faça seu cadastro aqui</h3>
+          <button (click)="login()">Entrar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

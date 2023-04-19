@@ -1,0 +1,82 @@
+.topsimple{
+  width: 50%;
+  margin: 0 auto;
+}
+.ger{
+  position: fixed;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 100px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 630px;
+  display: flex;
+  background-color: #eeeeee;
+}
+.toolbar {
+  position: absolute;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #4984D4;
+  color: white;
+  font-weight: 600;
+}
+.toolbar img {
+  margin-left: 20%;
+}
+.pointbody{
+  padding-right: 20px;
+  width: 100%;
+
+}
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  background-color: #4984D4;
+  color: white;
+}
+#matric{
+  display: flex;
+  padding-left: 50px;
+}#matric2{
+   display: flex;
+ }
+#button1{
+  color: white;
+  padding: 12px 28px;
+  border-radius: 4px;
+  font-size: 12px;
+  background-color: #008CBA;
+  opacity: 0.6;
+  cursor: pointer;
+}
+.calendar{
+  display: inline-block; width: 15%;
+}
+label {display: block;}
+input, button {padding: 10px;}
+input {width: 50%;}

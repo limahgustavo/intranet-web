@@ -1,0 +1,34 @@
+<div class="ger">
+  <!-- Toolbar -->
+  <div class="toolbar" role="banner">
+    <img alt="oi"
+         width="200"
+         src="assets\TJ-AM.png"/>
+  </div>
+  <div class="container">
+    <div class="centro">
+      <!-- conteúdo da div centralizada -->
+      <div class="info">
+        <!--      cadastro-->
+
+        <form id="form2" [formGroup]="formGroup">
+          <h1>Cadastro</h1>
+          <div>
+            <input formControlName="name" placeholder="Nome" type="text" id="nome" name="Nome">
+          </div>
+          <div>
+            <input formControlName="register" placeholder="Matricula" type="text" id="matricula" name="matricula">
+          </div>
+          <div>
+            <input formControlName="login" placeholder="Login" type="text" id="login" name="login">
+          </div>
+          <div>
+            <input formControlName="password" placeholder="Senha" type="password" id="senha" name="senha">
+          </div>
+          <h3 [routerLink]="['/login']" routerLinkActive="active">Ja tem login?</h3>
+          <button (click)="createUser() ">Criar Usuario</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
